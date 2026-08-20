@@ -1,0 +1,15 @@
+[package]
+name = "network_sim"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+indexmap = "2.2"
+petgraph = "0.6"
+rand = "0.8"
+twox-hash = "2.1"
+xxhash-rust = { version = "0.8", features = ["xxh64"] }
+rustc-hash = "2"
+good_lp = { version = "1.8", default-features = false, features = ["coin_cbc"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"

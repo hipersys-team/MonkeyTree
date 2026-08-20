@@ -1,0 +1,12 @@
+[env]
+# Point to conda's CBC libraries
+COIN_CBC_LIB_DIR = "/home/zabreyko/anaconda3/envs/bonobo/lib"
+
+[target.x86_64-unknown-linux-gnu]
+# Use system linker but link against conda's CBC libraries
+linker = "/usr/bin/cc"
+rustflags = [
+    "-C", "link-arg=-B/usr/bin",
+    "-C", "link-arg=-L/home/zabreyko/anaconda3/envs/bonobo/lib",
+    "-C", "link-arg=-Wl,-rpath,/home/zabreyko/anaconda3/envs/bonobo/lib"
+]
